@@ -1,0 +1,6 @@
+app/code/community/MobWeb/AddAddressField app/code/community/MobWeb/AddAddressField/
+
+app/etc/modules/MobWeb_AddAddressField.xml app/etc/modules/MobWeb_AddAddressField.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"

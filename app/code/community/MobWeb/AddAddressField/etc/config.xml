@@ -1,0 +1,54 @@
+<config>
+    <modules>
+        <MobWeb_AddAddressField>
+            <version>0.1.0</version>
+        </MobWeb_AddAddressField>
+    </modules>
+    
+    <global>
+        <resources>
+            <addaddressfield_setup>
+                <setup>
+                    <module>MobWeb_AddAddressField</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </addaddressfield_setup>
+        </resources>
+
+        <!-- Make sure the custom field is written to the DB when an order is submitted -->
+        <fieldsets>
+            <sales_copy_order_billing_address>
+                <custom_address_field><to_order>*</to_order></custom_address_field>
+            </sales_copy_order_billing_address>
+            <sales_copy_order_shipping_address>
+                <custom_address_field><to_order>*</to_order></custom_address_field>
+            </sales_copy_order_shipping_address>
+            <sales_convert_quote_address>
+                <custom_address_field><to_order_address>*</to_order_address><to_customer_address>*</to_customer_address></custom_address_field>
+            </sales_convert_quote_address>
+            <sales_convert_order_address>
+                <custom_address_field><to_quote_address>*</to_quote_address></custom_address_field>
+            </sales_convert_order_address>
+            <customer_address>
+                 <custom_address_field><to_quote_address>*</to_quote_address></custom_address_field>
+            </customer_address>
+            <checkout_onepage_billing>
+                <custom_address_field><to_customer>*</to_customer></custom_address_field>
+            </checkout_onepage_billing>
+        </fieldsets>
+    </global>
+
+    <admin>
+        <fieldsets>
+            <customer_dataflow>
+                <custom_address_field>
+                    <billing>1</billing>
+                    <shipping>1</shipping>
+                </custom_address_field>
+            </customer_dataflow>
+        </fieldsets>
+    </admin>
+</config>

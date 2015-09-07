@@ -10,9 +10,9 @@ Replace all occurrences of the label "Custom Address Field" and the attribute co
 
 Modify your templates so that the fields can be entered in the front- and backend. In Magento CE 1.9 the templates that I had to modify were:
 
-- Add/edit address in the customer account: *app/design/<theme>/<package>/template/customer/address/edit.phtml*
-- Checkout billing address: *app/design/<theme>/<package>/template/persistent/checkout/onepage/billing.phtml*
-- Checkout shipping address: *app/design/<theme>/<package>/template/checkout/onepage/shipping.phtml*
+- Add/edit address in the customer account: *app/design/THEME/PACKAGE/template/customer/address/edit.phtml*
+- Checkout billing address: *app/design/THEME/PACKAGE/template/persistent/checkout/onepage/billing.phtml*
+- Checkout shipping address: *app/design/THEME/PACKAGE/template/checkout/onepage/shipping.phtml*
 
 Simply copy and edit an existing field to add your new field, for example like this:
 
